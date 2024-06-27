@@ -31,7 +31,7 @@ var Color = function (obj) {
 		} else if (vals = string.getHwb(obj)) {
 			this.setValues('hwb', vals);
 		}
-	} else if (typeof obj === 'object') {
+	} else if (obj !== null && typeof obj === 'object') {
 		vals = obj;
 		if (vals.r !== undefined || vals.red !== undefined) {
 			this.setValues('rgb', vals);
